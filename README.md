@@ -1,46 +1,89 @@
-# ubuntu-bootstrap
-Automated Ubuntu post-install bootstrap script for development and workstation setup.
+# Linux Setup Automation Script
 
-# Ubuntu Development Workstation Bootstrap
+A modular, interactive Linux setup script designed to automate package installation based on selected usage profiles.
 
-![Ubuntu](https://img.shields.io/badge/OS-Ubuntu-orange) ![Bash](https://img.shields.io/badge/Shell-Bash-blue) ![Status](https://img.shields.io/badge/Status-Ready%20to%20Use-green)
-
-Automated Ubuntu post-install setup script for developers, engineers, and power users.  
-This script installs essential development tools, network utilities, desktop applications, and other handy packages to get your workstation ready quickly.
+This project replaces a linear installation script with a scalable, profile-based installer using an interactive CLI menu.
 
 ---
 
 ## Features
 
-- **System Update & Upgrade**
-  - Keeps your Ubuntu system up-to-date automatically.
-
-- **Development Tools**
-  - `build-essential`, `git`, `curl`, `wget`, `gnupg`, `software-properties-common`
-
-- **Terminal & Network Utilities**
-  - `htop`, `lm-sensors`, `rar`, `unrar`
-  - `wireshark`, `net-tools`, `nmap`
-
-- **GUI Applications**
-  - `simplescreenrecorder`, `ktouch`, `conky`
-  - Telegram, Sticky Notes, Cups (via Snap)
-
-- **Desktop & Optional Rescue**
-  - Ubuntu wallpaper packages and other useful desktop packages.
-
-- **Media & Utility Tools**
-  - `vlc`, `gufw`, `gparted`
-
-- **Automatic Cleanup**
-  - `autoremove` and `autoclean` for a clean system.
+* Interactive installation menu
+* Modular function-based architecture
+* Machine Vision setup profile
+* General development environment setup
+* Network tools profile
+* GUI applications profile
+* Snap package support
+* Clean-up routine after installation
 
 ---
 
-## Installation & Usage
+## Installation
 
-1. Clone this repository:
+### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/USERNAME/ubuntu-dev-bootstrap.git
-cd ubuntu-dev-bootstrap
+git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
+cd YOUR_REPOSITORY
+```
+
+---
+
+### 2. Give Execute Permission
+
+```bash
+chmod +x Os.sh
+```
+
+---
+
+### 3. Run the Script
+
+```bash
+./Os.sh
+```
+
+You will be prompted to select an installation profile from the menu.
+
+---
+
+## Available Installation Profiles
+
+| Option | Profile           | Description                           |
+| ------ | ----------------- | ------------------------------------- |
+| 1      | Machine Vision    | OpenCV, NumPy, V4L tools, FFmpeg      |
+| 2      | General Setup     | Essential build and utility tools     |
+| 3      | Network Tools     | Wireshark, Nmap, Net-tools            |
+| 4      | GUI Applications  | Screen recorder, system monitor, etc. |
+| 5      | Snap Apps         | Telegram, CUPS, Sticky Notes          |
+| 6      | Full Installation | Installs all profiles                 |
+| 0      | Exit              | Abort execution                       |
+
+---
+
+## Requirements
+
+* Ubuntu or Debian-based distribution
+* sudo privileges
+* Internet connection
+
+---
+
+## Notes
+
+* The script uses `set -e` to stop execution on errors.
+* System update runs before profile installation (except Snap-only mode).
+* A system restart is recommended after completion.
+
+---
+
+## Contributing
+
+Pull requests are welcome. For major changes, open an issue first to discuss proposed modifications.
+
+---
+
+## License
+
+MIT License
