@@ -33,7 +33,7 @@ cd YOUR_REPOSITORY
 ### 2. Give Execute Permission
 
 ```bash
-chmod +x Os.sh
+chmod +x ubuntu-bootstrap.sh
 ```
 
 ---
@@ -41,7 +41,7 @@ chmod +x Os.sh
 ### 3. Run the Script
 
 ```bash
-./Os.sh
+./ubuntu-bootstrap.sh
 ```
 
 You will be prompted to select an installation profile from the menu.
