@@ -191,7 +191,7 @@ install_machine_vision() {
 
 install_network() {
     echo -e "${YELLOW}>>> Installing Network Tools...${RESET}"
-    sudo apt install -y wireshark net-tools nmap
+    sudo apt install -y wireshark net-tools nmap tcpdum
 }
 
 install_gui_apps() {
