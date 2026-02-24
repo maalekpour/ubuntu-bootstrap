@@ -116,7 +116,7 @@ install_general() {
     echo "   Test ripgrep/fd/bat:   rg 'pattern'   fd .   bat file.txt"
 
     echo -e "${GREEN}>>> General development setup finished.${RESET}"
-}
+
 
 }
 
