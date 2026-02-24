@@ -19,7 +19,7 @@ install_general() {
         software-properties-common apt-transport-https \
         ca-certificates gnupg htop lm-sensors rar unrar \
         vlc gufw gparted gnome-shell-extensions uget handbrake \
-        smplayer
+        smplayer timeshift
 
 }
 
@@ -108,6 +108,8 @@ install_snaps() {
     sudo snap install telegram-desktop
     sudo snap install cups
     sudo snap install sticky-notes-simple
+    sudo snap install obs-studio
+    sudo snap install winrar
 }
 
 cleanup() {
@@ -121,7 +123,7 @@ show_menu() {
     echo " Select Installation Profile"
     echo "======================================"
     echo "1) Machine Vision Setup"
-    echo "2) General Setup"
+    echo "2) General Setup(snap ,gui , etc)"
     echo "3) Network Tools"
     echo "4) GUI Applications"
     echo "5) Snap Apps"
@@ -143,6 +145,8 @@ case $choice in
     2)
         update_system
         install_general
+        install_gui_apps
+        install_snaps
         ;;
     3)
         update_system
