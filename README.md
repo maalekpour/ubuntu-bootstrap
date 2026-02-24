@@ -1,89 +1,48 @@
-# Linux Setup Automation Script
+# Ubuntu Developer Bootstrap
 
-A modular, interactive Linux setup script designed to automate package installation based on selected usage profiles.
+**One-command modular post-install setup for Ubuntu developer workstations**  
+Interactive CLI menu • Machine Vision & Computer Vision ready • Modern C++/Python toolchain • Clean & beautiful output
 
-This project replaces a linear installation script with a scalable, profile-based installer using an interactive CLI menu.
-
----
-
-## Features
-
-* Interactive installation menu
-* Modular function-based architecture
-* Machine Vision setup profile
-* General development environment setup
-* Network tools profile
-* GUI applications profile
-* Snap package support
-* Clean-up routine after installation
+[![Ubuntu 24.04+](https://img.shields.io/badge/Ubuntu-24.04%20%7C%2024.10%20%7C%2025.04-orange?style=flat&logo=ubuntu)](https://ubuntu.com)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![ShellCheck](https://github.com/YOUR_USERNAME/YOUR_REPOSITORY/actions/workflows/shellcheck.yml/badge.svg)](https://github.com/YOUR_USERNAME/YOUR_REPOSITORY/actions) <!-- optional – add later -->
 
 ---
 
-## Installation
+## ✨ Why this script?
 
-### 1. Clone the Repository
+This is **not** another 3000-line monolithic bootstrap.  
+It gives you:
+
+- clean separation of concerns (one function = one concern)
+- interactive profile selection
+- focused machine-vision / computer-vision ready stack
+- modern developer CLI experience (ripgrep, bat, fd, btop, …)
+- reasonable defaults for 2025–2026 development
+
+Perfect for fresh Ubuntu installs, VM resets, new workstations, teaching environments, CV/ML side projects, etc.
+
+## 📋 Available Profiles
+
+| #  | Profile              | Main components installed                                                                 | Best for                                 |
+|----|----------------------|--------------------------------------------------------------------------------------------|------------------------------------------|
+| 1  | **Machine Vision**   | OpenCV(+contrib), GStreamer, scientific stack, labelme, guvcview, ffmpeg, v4l-utils…      | Computer Vision, robotics, YOLO, mediapipe |
+| 2  | **General Setup**    | gcc/clang/cmake, Python venv+black+isort+mypy, ripgrep/bat/fd/exa/btop, tmux/zsh/neovim…  | General software dev (C++/Python/Rust/…) |
+| 3  | **Network Tools**    | wireshark, nmap, tcpdump, net-tools                                                        | Networking, security, debugging          |
+| 4  | **GUI Applications** | simplescreenrecorder, conky, ktouch, codeblocks                                            | Daily desktop + light IDE                |
+| 5  | **Snap Apps**        | telegram-desktop, obs-studio, winrar, sticky-notes-simple, cups                           | Communication + streaming + compatibility|
+| 6  | **Full Installation**| **Everything above** (recommended for powerful dev + CV workstation)                       | New powerful setup from scratch          |
+| 0  | Exit                 | —                                                                                          | —                                        |
+
+## 🚀 Quick Start
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
-cd YOUR_REPOSITORY
-```
+# 1. Clone
+git clone https://github.com/YOUR_USERNAME/ubuntu-bootstrap.git
+cd ubuntu-bootstrap
 
----
-
-### 2. Give Execute Permission
-
-```bash
+# 2. Make executable
 chmod +x ubuntu-bootstrap.sh
-```
 
----
-
-### 3. Run the Script
-
-```bash
+# 3. Run
 ./ubuntu-bootstrap.sh
-```
-
-You will be prompted to select an installation profile from the menu.
-
----
-
-## Available Installation Profiles
-
-| Option | Profile           | Description                           |
-| ------ | ----------------- | ------------------------------------- |
-| 1      | Machine Vision    | OpenCV, NumPy, V4L tools, FFmpeg      |
-| 2      | General Setup     | Essential build and utility tools     |
-| 3      | Network Tools     | Wireshark, Nmap, Net-tools            |
-| 4      | GUI Applications  | Screen recorder, system monitor, etc. |
-| 5      | Snap Apps         | Telegram, CUPS, Sticky Notes          |
-| 6      | Full Installation | Installs all profiles                 |
-| 0      | Exit              | Abort execution                       |
-
----
-
-## Requirements
-
-* Ubuntu or Debian-based distribution
-* sudo privileges
-* Internet connection
-
----
-
-## Notes
-
-* The script uses `set -e` to stop execution on errors.
-* System update runs before profile installation (except Snap-only mode).
-* A system restart is recommended after completion.
-
----
-
-## Contributing
-
-Pull requests are welcome. For major changes, open an issue first to discuss proposed modifications.
-
----
-
-## License
-
-MIT License
