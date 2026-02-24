@@ -46,3 +46,32 @@ chmod +x ubuntu-bootstrap.sh
 
 # 3. Run
 ./ubuntu-bootstrap.sh
+
+CLI Cheatsheet
+
+```# Super fast search in files
+rg "error.*database" ~/projects
+
+# Find files (ignores .git, node_modules by default)
+fd main.py
+fd -e cpp "parser"
+
+# Pretty cat
+bat README.md
+bat --diff old.py new.py   # shows git-like diff
+
+# Modern ls
+exa --icons --git --long
+exa --tree --level=2
+
+# Fancy system monitor
+btop
+
+# One-command system overview
+glances
+
+# Pretty-print json
+curl api.example.com/data | jq .
+
+# Pretty yaml
+cat config.yaml | yq e '.spec.template'```
