@@ -207,6 +207,7 @@ install_snaps() {
     sudo snap install sticky-notes-simple
     sudo snap install obs-studio
     sudo snap install winrar
+	sudo snap install shotcut
 }
 
 cleanup() {
