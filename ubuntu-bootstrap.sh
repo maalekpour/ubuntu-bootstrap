@@ -18,7 +18,7 @@ install_general() {
     sudo apt install -y build-essential curl wget git \
         software-properties-common apt-transport-https \
         ca-certificates gnupg htop lm-sensors rar unrar \
-        vlc gufw gparted gnome-shell-extensions 
+        vlc gufw gparted gnome-shell-extensions uget
 
 }
 
