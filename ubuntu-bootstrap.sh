@@ -14,12 +14,109 @@ update_system() {
 }
 
 install_general() {
-    echo -e "${GREEN}>>> Installing General Tools...${RESET}"
-    sudo apt install -y build-essential curl wget git \
-        software-properties-common apt-transport-https \
-        ca-certificates gnupg htop lm-sensors rar unrar \
-        vlc gufw gparted gnome-shell-extensions uget handbrake \
-        smplayer timeshift
+    echo -e "${GREEN}>>> Updating package lists...${RESET}"
+    sudo apt update
+
+    echo -e "${GREEN}>>> Installing General + C++ + Python development tools...${RESET}"
+
+    sudo apt install -y \
+        # === Core build & compilation (C/C++/etc.) ===
+        build-essential \
+        cmake \
+        ninja-build \
+        pkg-config \
+        make \
+        gdb \
+        valgrind \
+        clang \
+        clang-format \
+        clang-tidy \
+        lldb \
+        # === C++ extras (very common in 2025–2026) ===
+        libstdc++-dev \
+        libfmt-dev \
+        nlohmann-json3-dev \
+        catch2 \
+        # === Python essentials ===
+        python3 \
+        python3-dev \
+        python3-venv \
+        python3-pip \
+        python3-setuptools \
+        python3-wheel \
+        python3-black \
+        python3-isort \
+        python3-mypy \
+        python3-pytest \
+        # === General developer utilities ===
+        git \
+        git-lfs \
+        curl \
+        wget \
+        jq \
+        yq \
+        ripgrep \
+        fd-find \
+        bat \
+        exa \
+        tree \
+        tmux \
+        zsh \
+        neofetch \
+        htop \
+        btop \
+        glances \
+        lm-sensors \
+        # === Compression & archives ===
+        unzip \
+        zip \
+        p7zip-full \
+        rar \
+        unrar \
+        # === Networking & debug ===
+        net-tools \
+        iputils-ping \
+        traceroute \
+        nmap \
+        wireshark \
+        tcpdump \
+        # === Media & GUI helpers (already had some, keeping + extras) ===
+        vlc \
+        smplayer \
+        handbrake \
+        gufw \
+        gparted \
+        gnome-shell-extensions \
+        uget \
+        # === Misc very frequently used ===
+        timeshift \
+        vim \
+        nano \
+        neovim \
+        software-properties-common \
+        apt-transport-https \
+        ca-certificates \
+        gnupg \
+        openssh-client \
+        rsync
+
+    echo -e "${GREEN}>>> Core general, C++ and Python development packages installed.${RESET}"
+
+    echo -e "${YELLOW}>>> Optional / consider installing via snap / flatpak / pip:${RESET}"
+    echo "   snap install --classic code                     # VS Code"
+    echo "   snap install pycharm-community --classic        # PyCharm"
+    echo "   snap install clion --classic                    # CLion (C++)"
+    echo "   flatpak install flathub com.visualstudio.code   # alternative VS Code"
+    echo "   pip install --user poetry uv pipx               # modern Python tools"
+    echo "   pip install --user pre-commit                   # git hooks"
+    echo "   # Docker → follow official docs (convenient for dev containers)"
+    echo ""
+    echo "   Test C++ compiler:     g++ --version"
+    echo "   Test Python venv:      python3 -m venv testenv"
+    echo "   Test ripgrep/fd/bat:   rg 'pattern'   fd .   bat file.txt"
+
+    echo -e "${GREEN}>>> General development setup finished.${RESET}"
+}
 
 }
 
