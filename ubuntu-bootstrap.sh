@@ -18,7 +18,8 @@ install_general() {
     sudo apt install -y build-essential curl wget git \
         software-properties-common apt-transport-https \
         ca-certificates gnupg htop lm-sensors rar unrar \
-        vlc gufw gparted
+        vlc gufw gparted gnome-shell-extensions 
+
 }
 
 install_machine_vision() {
@@ -34,7 +35,8 @@ install_network() {
 
 install_gui_apps() {
     echo -e "${GREEN}>>> Installing GUI Apps...${RESET}"
-    sudo apt install -y simplescreenrecorder ktouch conky
+    sudo apt install -y simplescreenrecorder ktouch conky ktouch \
+			codeblocks 
 }
 
 install_snaps() {
