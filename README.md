@@ -5,7 +5,7 @@ Interactive CLI menu • Machine Vision & Computer Vision ready • Modern C++/P
 
 [![Ubuntu 24.04+](https://img.shields.io/badge/Ubuntu-24.04%20%7C%2024.10%20%7C%2025.04-orange?style=flat&logo=ubuntu)](https://ubuntu.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![ShellCheck](https://github.com/maalekpour/ubuntu-bootstrap/actions/workflows/shellcheck.yml/badge.svg)]
+
 
 ---
 
