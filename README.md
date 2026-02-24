@@ -46,10 +46,11 @@ chmod +x ubuntu-bootstrap.sh
 
 # 3. Run
 ./ubuntu-bootstrap.sh
+```
 
-CLI Cheatsheet
-
-```# Super fast search in files
+## CLI cheatsheet
+```
+# Super fast search in files
 rg "error.*database" ~/projects
 
 # Find files (ignores .git, node_modules by default)
@@ -74,4 +75,7 @@ glances
 curl api.example.com/data | jq .
 
 # Pretty yaml
-cat config.yaml | yq e '.spec.template'```
+cat config.yaml | yq e '.spec.template'
+```
+
+
